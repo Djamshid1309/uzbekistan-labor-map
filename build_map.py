@@ -1,6 +1,9 @@
 """
 build_map.py
 
+
+
+Запуск:
     python build_map.py
 """
 
@@ -78,8 +81,10 @@ def get_area_ids():
 
 def get_vacancy_count(area_id):
     url = "https://api.hh.ru/vacancies"
-    params = {"area": area_id, "per_page": 1}
+    params = {"area": area_id, "per_page": 1, "host": "hh.uz"}
     resp = requests.get(url, headers=HEADERS, params=params, timeout=30)
+    if resp.status_code != 200:
+        print(f"[!] Ошибка для area={area_id}: {resp.status_code} {resp.text}")
     resp.raise_for_status()
     return resp.json().get("found", 0)
 
@@ -98,7 +103,12 @@ def collect_data():
             print(f"[!] Не найден area_id для города: {city} — пропускаю")
             continue
 
-        count = get_vacancy_count(area_id)
+        try:
+            count = get_vacancy_count(area_id)
+        except requests.exceptions.HTTPError as e:
+            print(f"[!] Не удалось получить данные для {city} (area_id={area_id}): {e}")
+            continue
+
         results[city] = {
             "lat": lat,
             "lon": lon,
