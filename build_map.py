@@ -49,6 +49,8 @@ def get_area_ids():
     """
     url = "https://api.hh.ru/areas"
     resp = requests.get(url, headers=HEADERS, timeout=30)
+    if resp.status_code != 200:
+        print(f"[!] Ошибка при запросе {url}: {resp.status_code} {resp.text}")
     resp.raise_for_status()
     countries = resp.json()
 
