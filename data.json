@@ -1,4 +1,62 @@
 {
-  "updated_at": "2026-06-12T12:40:13.079703+00:00",
-  "cities": {}
+  "updated_at": "2026-06-12T12:48:12.040249+00:00",
+  "using_fallback": true,
+  "cities": {
+    "Ташкент": {
+      "lat": 41.2995,
+      "lon": 69.2401,
+      "area_id": null,
+      "vacancies": 1850,
+      "source": "fallback"
+    },
+    "Самарканд": {
+      "lat": 39.627,
+      "lon": 66.975,
+      "area_id": null,
+      "vacancies": 120,
+      "source": "fallback"
+    },
+    "Бухара": {
+      "lat": 39.7747,
+      "lon": 64.4286,
+      "area_id": null,
+      "vacancies": 65,
+      "source": "fallback"
+    },
+    "Андижан": {
+      "lat": 40.7821,
+      "lon": 72.3442,
+      "area_id": null,
+      "vacancies": 95,
+      "source": "fallback"
+    },
+    "Наманган": {
+      "lat": 41.0011,
+      "lon": 71.6726,
+      "area_id": null,
+      "vacancies": 85,
+      "source": "fallback"
+    },
+    "Фергана": {
+      "lat": 40.3864,
+      "lon": 71.7843,
+      "area_id": null,
+      "vacancies": 110,
+      "source": "fallback"
+    },
+    "Нукус": {
+      "lat": 42.4531,
+      "lon": 59.6103,
+      "area_id": null,
+      "vacancies": 45,
+      "source": "fallback"
+    },
+    "Карши": {
+      "lat": 38.8606,
+      "lon": 65.7891,
+      "area_id": null,
+      "vacancies": 55,
+      "source": "fallback"
+    }
+  }
 }

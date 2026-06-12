@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b781f779c9b86c64d62ede0614bbcd5d {
+                #map_deae72f7cd34774e09de6d68d3e7e585 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -57,24 +57,24 @@
     <div style="position: fixed; top: 10px; left: 50px; z-index: 9999;
                 background: white; padding: 10px 15px; border-radius: 8px;
                 box-shadow: 0 2px 6px rgba(0,0,0,0.3); font-family: sans-serif;
-                max-width: 320px;">
+                max-width: 340px;">
         <div style="font-size:15px; font-weight:bold;">
             Спрос на рынке труда: открытые вакансии по городам Узбекистана
         </div>
         <div style="font-size:12px; color:#555; margin-top:4px;">
-            Источник: hh.uz (api.hh.ru) · Обновлено: 2026-06-12 12:40 UTC
+            Источник: hh.uz (api.hh.ru) · Обновлено: 2026-06-12 12:48 UTC · <b style='color:#c0392b'>данные приблизительные</b>
         </div>
     </div>
     
     
-            <div class="folium-map" id="map_b781f779c9b86c64d62ede0614bbcd5d" ></div>
+            <div class="folium-map" id="map_deae72f7cd34774e09de6d68d3e7e585" ></div>
         
 </body>
 <script>
     
     
-            var map_b781f779c9b86c64d62ede0614bbcd5d = L.map(
-                "map_b781f779c9b86c64d62ede0614bbcd5d",
+            var map_deae72f7cd34774e09de6d68d3e7e585 = L.map(
+                "map_deae72f7cd34774e09de6d68d3e7e585",
                 {
                     center: [41.3, 64.5],
                     crs: L.CRS.EPSG3857,
@@ -91,7 +91,7 @@
 
         
     
-            var tile_layer_d98ddaa607e92587f60d456bc6b9f8ad = L.tileLayer(
+            var tile_layer_cc9e20e313288292355f46e5afbef331 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -108,7 +108,399 @@
             );
         
     
-            tile_layer_d98ddaa607e92587f60d456bc6b9f8ad.addTo(map_b781f779c9b86c64d62ede0614bbcd5d);
+            tile_layer_cc9e20e313288292355f46e5afbef331.addTo(map_deae72f7cd34774e09de6d68d3e7e585);
         
+    
+            var circle_marker_f0e652fd27d14a4de80b33dec2f2953e = L.circleMarker(
+                [41.2995, 69.2401],
+                {"bubblingMouseEvents": true, "color": "#1f4e8c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 38.0, "stroke": true, "weight": 1}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+        var popup_dbeebb4f825aae2121098a6065e87d57 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_21f383eb5e36f99b45f7e64c0b493473 = $(`<div id="html_21f383eb5e36f99b45f7e64c0b493473" style="width: 100.0%; height: 100.0%;"><b>Ташкент</b><br>Открытых вакансий: <b>1850</b> <i>(оценка)</i><br>Доля от всех вакансий по стране: 76.3%</div>`)[0];
+                popup_dbeebb4f825aae2121098a6065e87d57.setContent(html_21f383eb5e36f99b45f7e64c0b493473);
+            
+        
+
+        circle_marker_f0e652fd27d14a4de80b33dec2f2953e.bindPopup(popup_dbeebb4f825aae2121098a6065e87d57)
+        ;
+
+        
+    
+    
+            circle_marker_f0e652fd27d14a4de80b33dec2f2953e.bindTooltip(
+                `<div>
+                     Ташкент: 1850
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cda6b949d0dd80de133d55efdcb444dc = L.marker(
+                [41.2995, 69.2401],
+                {
+}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+            var div_icon_d533f265710b26ef0b70eb1670dd8ac3 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:11px; font-weight:bold; color:#1f4e8c;\"\u003e\u0422\u0430\u0448\u043a\u0435\u043d\u0442\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_cda6b949d0dd80de133d55efdcb444dc.setIcon(div_icon_d533f265710b26ef0b70eb1670dd8ac3);
+            
+    
+            var circle_marker_2c478dc6ce563cec26fe93cce546a5ec = L.circleMarker(
+                [39.627, 66.975],
+                {"bubblingMouseEvents": true, "color": "#1f4e8c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.945945945945946, "stroke": true, "weight": 1}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+        var popup_4163cde63a0235e368d38e24af3684cb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_05b556c3c8d6558cbc7f43b7a866d128 = $(`<div id="html_05b556c3c8d6558cbc7f43b7a866d128" style="width: 100.0%; height: 100.0%;"><b>Самарканд</b><br>Открытых вакансий: <b>120</b> <i>(оценка)</i><br>Доля от всех вакансий по стране: 4.9%</div>`)[0];
+                popup_4163cde63a0235e368d38e24af3684cb.setContent(html_05b556c3c8d6558cbc7f43b7a866d128);
+            
+        
+
+        circle_marker_2c478dc6ce563cec26fe93cce546a5ec.bindPopup(popup_4163cde63a0235e368d38e24af3684cb)
+        ;
+
+        
+    
+    
+            circle_marker_2c478dc6ce563cec26fe93cce546a5ec.bindTooltip(
+                `<div>
+                     Самарканд: 120
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c2a4cfaef1ed3ba0b2a614d1c25732c6 = L.marker(
+                [39.627, 66.975],
+                {
+}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+            var div_icon_14972dadf023f6116508cc4a8c280aa6 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:11px; font-weight:bold; color:#1f4e8c;\"\u003e\u0421\u0430\u043c\u0430\u0440\u043a\u0430\u043d\u0434\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_c2a4cfaef1ed3ba0b2a614d1c25732c6.setIcon(div_icon_14972dadf023f6116508cc4a8c280aa6);
+            
+    
+            var circle_marker_084f9c4660d4d853b72fad77522898b1 = L.circleMarker(
+                [39.7747, 64.4286],
+                {"bubblingMouseEvents": true, "color": "#1f4e8c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.054054054054054, "stroke": true, "weight": 1}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+        var popup_3fbcb278943516ae5dfd3a4d065a7f5c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a3b84dd00d94c964f650a81adcfd4dc4 = $(`<div id="html_a3b84dd00d94c964f650a81adcfd4dc4" style="width: 100.0%; height: 100.0%;"><b>Бухара</b><br>Открытых вакансий: <b>65</b> <i>(оценка)</i><br>Доля от всех вакансий по стране: 2.7%</div>`)[0];
+                popup_3fbcb278943516ae5dfd3a4d065a7f5c.setContent(html_a3b84dd00d94c964f650a81adcfd4dc4);
+            
+        
+
+        circle_marker_084f9c4660d4d853b72fad77522898b1.bindPopup(popup_3fbcb278943516ae5dfd3a4d065a7f5c)
+        ;
+
+        
+    
+    
+            circle_marker_084f9c4660d4d853b72fad77522898b1.bindTooltip(
+                `<div>
+                     Бухара: 65
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f6d84b743de786afb195957c1ad408f8 = L.marker(
+                [39.7747, 64.4286],
+                {
+}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+            var div_icon_6e926e7553b50c6cfa34ff550d66c0d3 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:11px; font-weight:bold; color:#1f4e8c;\"\u003e\u0411\u0443\u0445\u0430\u0440\u0430\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_f6d84b743de786afb195957c1ad408f8.setIcon(div_icon_6e926e7553b50c6cfa34ff550d66c0d3);
+            
+    
+            var circle_marker_c47f8200487ceda9484dc988aecac301 = L.circleMarker(
+                [40.7821, 72.3442],
+                {"bubblingMouseEvents": true, "color": "#1f4e8c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.54054054054054, "stroke": true, "weight": 1}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+        var popup_b11a88bd60d162aa52191880fd7cc4d8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_536340f2a6b76ae57b308482d9120153 = $(`<div id="html_536340f2a6b76ae57b308482d9120153" style="width: 100.0%; height: 100.0%;"><b>Андижан</b><br>Открытых вакансий: <b>95</b> <i>(оценка)</i><br>Доля от всех вакансий по стране: 3.9%</div>`)[0];
+                popup_b11a88bd60d162aa52191880fd7cc4d8.setContent(html_536340f2a6b76ae57b308482d9120153);
+            
+        
+
+        circle_marker_c47f8200487ceda9484dc988aecac301.bindPopup(popup_b11a88bd60d162aa52191880fd7cc4d8)
+        ;
+
+        
+    
+    
+            circle_marker_c47f8200487ceda9484dc988aecac301.bindTooltip(
+                `<div>
+                     Андижан: 95
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1a802f0a1a1d6fe28454c3dad0e984c9 = L.marker(
+                [40.7821, 72.3442],
+                {
+}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+            var div_icon_32e169b4696d82224385675141828b77 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:11px; font-weight:bold; color:#1f4e8c;\"\u003e\u0410\u043d\u0434\u0438\u0436\u0430\u043d\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_1a802f0a1a1d6fe28454c3dad0e984c9.setIcon(div_icon_32e169b4696d82224385675141828b77);
+            
+    
+            var circle_marker_bcc8083d0c8ddcfca20a197fa65d20a7 = L.circleMarker(
+                [41.0011, 71.6726],
+                {"bubblingMouseEvents": true, "color": "#1f4e8c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.378378378378379, "stroke": true, "weight": 1}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+        var popup_21fe42f1b8e6a3a8d0c5be94c2ed31fd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_69123ff34f5bd154c3df4c89caf3cdbb = $(`<div id="html_69123ff34f5bd154c3df4c89caf3cdbb" style="width: 100.0%; height: 100.0%;"><b>Наманган</b><br>Открытых вакансий: <b>85</b> <i>(оценка)</i><br>Доля от всех вакансий по стране: 3.5%</div>`)[0];
+                popup_21fe42f1b8e6a3a8d0c5be94c2ed31fd.setContent(html_69123ff34f5bd154c3df4c89caf3cdbb);
+            
+        
+
+        circle_marker_bcc8083d0c8ddcfca20a197fa65d20a7.bindPopup(popup_21fe42f1b8e6a3a8d0c5be94c2ed31fd)
+        ;
+
+        
+    
+    
+            circle_marker_bcc8083d0c8ddcfca20a197fa65d20a7.bindTooltip(
+                `<div>
+                     Наманган: 85
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_588371f6e5bae537c4ba47e42d45cfb3 = L.marker(
+                [41.0011, 71.6726],
+                {
+}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+            var div_icon_5587af439646e7b67bb27f90de6d2843 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:11px; font-weight:bold; color:#1f4e8c;\"\u003e\u041d\u0430\u043c\u0430\u043d\u0433\u0430\u043d\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_588371f6e5bae537c4ba47e42d45cfb3.setIcon(div_icon_5587af439646e7b67bb27f90de6d2843);
+            
+    
+            var circle_marker_9e35bd19fccf5d80dc0452711a6f9f87 = L.circleMarker(
+                [40.3864, 71.7843],
+                {"bubblingMouseEvents": true, "color": "#1f4e8c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.783783783783784, "stroke": true, "weight": 1}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+        var popup_e9ddf3553e5c1809bbf484307e7b81ac = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_725f3f17950a281e66cf03da902ff74f = $(`<div id="html_725f3f17950a281e66cf03da902ff74f" style="width: 100.0%; height: 100.0%;"><b>Фергана</b><br>Открытых вакансий: <b>110</b> <i>(оценка)</i><br>Доля от всех вакансий по стране: 4.5%</div>`)[0];
+                popup_e9ddf3553e5c1809bbf484307e7b81ac.setContent(html_725f3f17950a281e66cf03da902ff74f);
+            
+        
+
+        circle_marker_9e35bd19fccf5d80dc0452711a6f9f87.bindPopup(popup_e9ddf3553e5c1809bbf484307e7b81ac)
+        ;
+
+        
+    
+    
+            circle_marker_9e35bd19fccf5d80dc0452711a6f9f87.bindTooltip(
+                `<div>
+                     Фергана: 110
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b57d9ddefa65d20c435d8e740bce7ead = L.marker(
+                [40.3864, 71.7843],
+                {
+}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+            var div_icon_d882f55db19b268d3e961502c46149fc = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:11px; font-weight:bold; color:#1f4e8c;\"\u003e\u0424\u0435\u0440\u0433\u0430\u043d\u0430\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_b57d9ddefa65d20c435d8e740bce7ead.setIcon(div_icon_d882f55db19b268d3e961502c46149fc);
+            
+    
+            var circle_marker_45e710e2e5b2bb0b938a0e1b69842a55 = L.circleMarker(
+                [42.4531, 59.6103],
+                {"bubblingMouseEvents": true, "color": "#1f4e8c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.72972972972973, "stroke": true, "weight": 1}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+        var popup_7e490617c48582009e37d9fba199c4b9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3133079de443bfdf95f0c504f2c5843b = $(`<div id="html_3133079de443bfdf95f0c504f2c5843b" style="width: 100.0%; height: 100.0%;"><b>Нукус</b><br>Открытых вакансий: <b>45</b> <i>(оценка)</i><br>Доля от всех вакансий по стране: 1.9%</div>`)[0];
+                popup_7e490617c48582009e37d9fba199c4b9.setContent(html_3133079de443bfdf95f0c504f2c5843b);
+            
+        
+
+        circle_marker_45e710e2e5b2bb0b938a0e1b69842a55.bindPopup(popup_7e490617c48582009e37d9fba199c4b9)
+        ;
+
+        
+    
+    
+            circle_marker_45e710e2e5b2bb0b938a0e1b69842a55.bindTooltip(
+                `<div>
+                     Нукус: 45
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5ec91e3bdea6a6bc69bacd59c32b7637 = L.marker(
+                [42.4531, 59.6103],
+                {
+}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+            var div_icon_7146662a41c0ca6931faff2a913aee7d = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:11px; font-weight:bold; color:#1f4e8c;\"\u003e\u041d\u0443\u043a\u0443\u0441\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_5ec91e3bdea6a6bc69bacd59c32b7637.setIcon(div_icon_7146662a41c0ca6931faff2a913aee7d);
+            
+    
+            var circle_marker_662b08b1d3a90c2bbb090a482944b8cb = L.circleMarker(
+                [38.8606, 65.7891],
+                {"bubblingMouseEvents": true, "color": "#1f4e8c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.891891891891891, "stroke": true, "weight": 1}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+        var popup_6b86db4d7450ac0e00b3b9cc355948aa = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_36f3770c5770da8af730c331970abbe6 = $(`<div id="html_36f3770c5770da8af730c331970abbe6" style="width: 100.0%; height: 100.0%;"><b>Карши</b><br>Открытых вакансий: <b>55</b> <i>(оценка)</i><br>Доля от всех вакансий по стране: 2.3%</div>`)[0];
+                popup_6b86db4d7450ac0e00b3b9cc355948aa.setContent(html_36f3770c5770da8af730c331970abbe6);
+            
+        
+
+        circle_marker_662b08b1d3a90c2bbb090a482944b8cb.bindPopup(popup_6b86db4d7450ac0e00b3b9cc355948aa)
+        ;
+
+        
+    
+    
+            circle_marker_662b08b1d3a90c2bbb090a482944b8cb.bindTooltip(
+                `<div>
+                     Карши: 55
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4697576d6b7f2e622136f60664461848 = L.marker(
+                [38.8606, 65.7891],
+                {
+}
+            ).addTo(map_deae72f7cd34774e09de6d68d3e7e585);
+        
+    
+            var div_icon_9dc2eec5cf42fa48d0a54cbbf4bc8f85 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:11px; font-weight:bold; color:#1f4e8c;\"\u003e\u041a\u0430\u0440\u0448\u0438\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_4697576d6b7f2e622136f60664461848.setIcon(div_icon_9dc2eec5cf42fa48d0a54cbbf4bc8f85);
+            
 </script>
 </html>
