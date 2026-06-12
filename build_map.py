@@ -1,11 +1,6 @@
 """
 build_map.py
 
-Собирает данные о количестве открытых вакансий по крупным городам Узбекистана
-через публичное API hh.ru (оно же обслуживает hh.uz) и строит интерактивную
-карту (folium) в виде index.html.
-
-Запуск:
     python build_map.py
 """
 
@@ -19,8 +14,6 @@ import folium
 # ---------------------------------------------------------------------------
 # Настройки
 # ---------------------------------------------------------------------------
-
-UZ_COUNTRY_AREA_ID = "97"  # Узбекистан в дереве регионов hh.ru
 
 # Города на карте: название (как в API hh.ru) -> координаты (lat, lon)
 CITIES = {
@@ -45,11 +38,16 @@ HEADERS = {
 # ---------------------------------------------------------------------------
 
 def get_area_ids():
-    """Возвращает словарь {название города: area_id} для Узбекистана."""
-    url = f"https://api.hh.ru/areas/{UZ_COUNTRY_AREA_ID}"
+    """Возвращает словарь {название города: area_id} для Узбекистана.
+
+    hh.ru отдаёт полное дерево регионов через /areas (без параметров) —
+    это список "стран" верхнего уровня, каждая со своим поддеревом регионов
+    и городов. Здесь мы находим узел "Узбекистан" и обходим его поддерево.
+    """
+    url = "https://api.hh.ru/areas"
     resp = requests.get(url, headers=HEADERS, timeout=30)
     resp.raise_for_status()
-    country = resp.json()
+    countries = resp.json()
 
     area_map = {}
 
@@ -58,7 +56,19 @@ def get_area_ids():
         for child in node.get("areas", []):
             walk(child)
 
-    walk(country)
+    uzbekistan = None
+    for country in countries:
+        if country["name"] in ("Узбекистан", "Uzbekistan"):
+            uzbekistan = country
+            break
+
+    if uzbekistan is None:
+        raise RuntimeError(
+            "Не удалось найти 'Узбекистан' в дереве регионов hh.ru. "
+            f"Доступные страны: {[c['name'] for c in countries]}"
+        )
+
+    walk(uzbekistan)
     return area_map
 
 
